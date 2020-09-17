@@ -17,6 +17,7 @@
     "mongoose": "^5.7.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "chronos-tracker": "^4.0.5"
   }
 }

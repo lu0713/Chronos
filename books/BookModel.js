@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 // UNCOMMENT THE LINE BELOW AND REPLACE WITH AN ACTUAL MONGODB URI FOR YOUR "CUSTOMERS" DATABASE
-// const myURI = 'mongodb+srv://johndoe:johndoe@cluster0-abcdef.mongodb.net/';
+require('./chronos-config'); // Bring in config file
+const myURI = process.env.MONGO_URI;
 
 mongoose.connect(myURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected!!!********* Books Database is live!!!'))

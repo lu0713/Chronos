@@ -1,6 +1,10 @@
 // UNCOMMENT THE LINES BELOW
 // const cmd = require('chronos-microservice-debugger3');
 // cmd.propagate();
+const cmd = require('chronos-tracker');
+require('./chronos-config'); // Bring in config file
+
+cmd.propagate();
 
 const PORT = 4545;
 const express = require('express');
@@ -12,7 +16,8 @@ const controller = require('./BookController.js');
 
 // UNCOMMENT THE LINE BELOW AND PASS IN YOUR CHOSEN ARGUMENTS
 // app.use('/', cmd.microCom('microserviceName', 'databaseType', 'databaseURL', 'wantMicroHealth', 'queryFrequency'))
- 
+app.use('/', cmd.track());
+
 app.use(bodyParser.json());
 app.use(cors());
 

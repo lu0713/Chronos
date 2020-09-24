@@ -427,7 +427,7 @@ button {
 
   .databaseIconContainer {
     display: inline-block;
-    overflow: visible;    
+    overflow: visible;
   }
 
   .databaseIconHeader {
@@ -443,7 +443,7 @@ button {
     top: -20px;
     left: 180px;
     border-radius: 3px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(0, 255, 42, 0.4);
+    box-shadow: $ggreenboxshadow;
     
     .databaseIcon {
       width: 55px;
@@ -478,7 +478,7 @@ button {
     top: -20px;
     left: 180px;
     border-radius: 3px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(255, 152, 0,.4);
+    box-shadow: $gyellowboxshadow;
     background-image: url('../assets/postgres-icon-white.png');
     background-size: cover;
     .databaseIcon {
@@ -507,7 +507,7 @@ button {
     top: -20px;
     left: 180px;
     border-radius: 3px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(0, 255, 42, 0.4);
+    box-shadow: $ggreenboxshadow;
     
     .databaseIcon {
       width: 55px;
@@ -566,11 +566,49 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-self: center;
   width: 95%;
   margin-left: 155px;
   margin-right: 160px;
+}
+
+.middleContainersIconHeader {
+   position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    float: left;
+    border-radius: 3px;
+    top: $iconHeaderTop;
+    right: $iconHeaderRight;
+
+    .databaseIcon {
+      width: 55px;
+      height: 55px;
+    }
+}
+
+.bottomContainersIconHeader {
+   position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    float: left;
+    border-radius: 3px;
+    top: $iconHeaderTop;
+    right: $iconHeaderRight;
+
+    .databaseIcon {
+      width: 55px;
+      height: 55px;
+    }
 }
 
 // MIDDLE ROW ON DASHBOARD
@@ -580,58 +618,104 @@ button {
 
 // TWO CONTAINERS INSIDE MIDDLE ROW
 .containerMiddleRow {
-  min-width: 280px;
-  width: 48.8%;
+  overflow: visible;
+  position: relative;
+  width: $middleRowCardWidth;
   background-color: $background;
   color: $darkgrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 280px;
+  height: $cardHeight;
   border-radius: 3px;
   box-shadow: $boxshadow4;
-  margin: 20px 0px;
+  margin: 20px;
 }
 
 #middleLeftContainer {
-  
+  display: inline-block;
+  overflow: visible;  
+}
+
+#middleLeftContainerIconHeader {
+  background-color: $gred;
+  box-shadow: $gredboxshadow;
 }
 
 #middleRightContainer {
+  display: inline-block;
+  overflow: visible;  
+}
+
+#middleRightContainerIconHeader {
+  background-color: $purple;
+  box-shadow: $purpleboxshadow;
+}
+
+.middleRowCard {
 
 }
 
+
 // BOTTOM ROW ON DASHBOARD
 #bottomContainer {
-
+  display: flex;
+  overflow: visible;
+  position: relative;
 }
 
 // THREE CONTAINERS INSIDE BOTTOM ROW
 .containerBottomRow {
-  min-width: 280px;
-  width: 31%;
+  overflow: visible;
+  position: relative;
+  width: $bottomRowCardWidth;
   background-color: $background;
   color: $darkgrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 280px;
+  height: $cardHeight;
   border-radius: 3px;
   box-shadow: $boxshadow4;
-  margin: 20px 0px;
+  margin: 20px;
 }
 
-#middleLeftContainer {
-
+// BLC
+#bottomLeftContainer {
+  display: inline-block;
+  overflow: visible;  
 }
 
-#middleCenterContainer {
-
+#bottomLeftContainerIconHeader {
+  background-color: $ggreen;
+  box-shadow: $ggreenboxshadow;
 }
 
-#middleRightContainer {
+// BCC
+#bottomCenterContainer {
+  display: inline-block;
+  overflow: visible;  
+}
+
+#bottomCenterContainerIconHeader {
+  background-color: $gblue;
+  box-shadow: $gblueboxshadow;
+}
+
+// BRC
+#bottomRightContainer {
+  display: inline-block;
+  overflow: visible;  
+}
+
+#bottomRightContainerIconHeader {
+  background-color: $purple;
+  box-shadow: $purpleboxshadow;
+}
+
+.bottomRowCard {
 
 }
 

@@ -239,21 +239,48 @@ const Occupied = React.memo(() => {
         <hr className="dashboardDivider" />
         
         <div className="lowerContainers" id="middleContainer">
-          <div className="containerMiddleRow" id="middleLeftContainer">One</div>
-          <div className="containerMiddleRow" id="middleRightContainer">Two</div>
+          
+          <div className="containerMiddleRow" id="middleLeftContainer">
+            <div className="middleContainersIconHeader" id="middleLeftContainerIconHeader">
+              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="MLC"></img>
+            </div>
+            <div className="middleRowCard"></div>
+          </div>
+          
+          <div className="containerMiddleRow" id="middleRightContainer">
+            <div className="middleContainersIconHeader" id="middleRightContainerIconHeader">
+              <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="MRC"></img>
+            </div>
+            <div className="middleRowCard"></div>
+          </div>
+
         </div>
 
         <hr className="dashboardDivider" />
 
         <div className="lowerContainers" id="bottomContainer">
-          <div className="containerBottomRow" id="bottomLeftContainer">One</div>
-          <div className="containerBottomRow" id="bottomCenterContainer">Two</div>
-          <div className="containerBottomRow" id="bottomRightContainer">Three</div>
+          <div className="containerBottomRow" id="bottomLeftContainer">
+            <div className="bottomContainersIconHeader" id="bottomLeftContainerIconHeader">
+              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BLC"></img>
+            </div>
+            <div className="bottomRowCard"></div>
+          </div>
+
+          <div className="containerBottomRow" id="bottomCenterContainer">
+            <div className="bottomContainersIconHeader" id="bottomCenterContainerIconHeader">
+              <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="BCC"></img>
+            </div>
+            <div className="bottomRowCard"></div>
+          </div>
+
+          <div className="containerBottomRow" id="bottomRightContainer">
+            <div className="bottomContainersIconHeader" id="bottomRightContainerIconHeader">
+              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BRC"></img>
+            </div>
+            <div className="bottomRowCard"></div>
+          </div>
         </div>
-
       </div>
-
-      
     </div>
   );
 });

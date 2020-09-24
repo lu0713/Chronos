@@ -244,14 +244,26 @@ const Occupied = React.memo(() => {
             <div className="middleContainersIconHeader" id="middleLeftContainerIconHeader">
               <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="MLC"></img>
             </div>
-            <div className="middleRowCard"></div>
+            <div className="middleRowCard">
+              <hr className="middleRowCardLine" />
+              <div className="middleCardFooter">
+                <UpdateIcon className="cardFooterIcon" />
+                <em><p id="middleCardFooterText">Just updated</p></em>
+              </div>
+            </div>
           </div>
           
           <div className="containerMiddleRow" id="middleRightContainer">
             <div className="middleContainersIconHeader" id="middleRightContainerIconHeader">
               <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="MRC"></img>
             </div>
-            <div className="middleRowCard"></div>
+            <div className="middleRowCard">
+              <hr className="middleRowCardLine" />
+              <div className="middleCardFooter">
+                <UpdateIcon className="cardFooterIcon" />
+                <em><p id="middleCardFooterText">Just updated</p></em>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -263,21 +275,39 @@ const Occupied = React.memo(() => {
             <div className="bottomContainersIconHeader" id="bottomLeftContainerIconHeader">
               <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BLC"></img>
             </div>
-            <div className="bottomRowCard"></div>
+            <div className="bottomRowCard">
+              <hr className="bottomRowCardLine" />
+              <div className="bottomCardFooter">
+                <UpdateIcon className="cardFooterIcon" />
+                <em><p id="bottomCardFooterText">Just updated</p></em>
+              </div>
+            </div>
           </div>
 
           <div className="containerBottomRow" id="bottomCenterContainer">
             <div className="bottomContainersIconHeader" id="bottomCenterContainerIconHeader">
               <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="BCC"></img>
             </div>
-            <div className="bottomRowCard"></div>
+            <div className="bottomRowCard">
+              <hr className="bottomRowCardLine" />
+              <div className="bottomCardFooter">
+                <UpdateIcon className="cardFooterIcon" />
+                <em><p id="bottomCardFooterText">Just updated</p></em>
+              </div>
+            </div>
           </div>
 
           <div className="containerBottomRow" id="bottomRightContainer">
             <div className="bottomContainersIconHeader" id="bottomRightContainerIconHeader">
               <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BRC"></img>
             </div>
-            <div className="bottomRowCard"></div>
+            <div className="bottomRowCard">
+              <hr className="bottomRowCardLine" />
+              <div className="bottomCardFooter">
+                <UpdateIcon className="cardFooterIcon" />
+                <em><p id="bottomCardFooterText">Just updated</p></em>
+              </div>
+            </div>
           </div>
         </div>
       </div>

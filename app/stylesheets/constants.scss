@@ -58,9 +58,9 @@ $headerFontSize: 18px;
 
 $cardHeight: 280px;
 $iconHeaderTop: -20px;
-$iconHeaderRight: 12px;
+$iconHeaderRight: 10px;
 $middleRowCardWidth: 800px;
-$bottomRowCardWidth: 600px;
+$bottomRowCardWidth: 520px;
 
 @mixin centerWithFlex($justify: center, $direction: row, $align: center) {
   display: flex;

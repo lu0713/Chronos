@@ -613,18 +613,19 @@ button {
 
 // MIDDLE ROW ON DASHBOARD
 #middleContainer {
-  
+  align-content: center;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  overflow: visible;
 }
 
 // TWO CONTAINERS INSIDE MIDDLE ROW
 .containerMiddleRow {
-  overflow: visible;
   position: relative;
   width: $middleRowCardWidth;
   background-color: $background;
   color: $darkgrey;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: $cardHeight;
@@ -654,26 +655,50 @@ button {
 }
 
 .middleRowCard {
-
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
+.middleRowCardLine {
+  background-color: $grey;
+  width: 94%;
+  border: none;
+  height: 1px;
+  margin: 15px 0px;
+}
+
+.middleCardFooter {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-left: -30px;
+}
+
+#middleCardFooterText {
+  color: $icon;
+  font-size: 11px;
+  margin: 0;
+  margin-left: 10px;
+}
 
 // BOTTOM ROW ON DASHBOARD
 #bottomContainer {
   display: flex;
   overflow: visible;
   position: relative;
+  align-content: center;
+  text-align: center;
+  white-space: nowrap;
 }
 
 // THREE CONTAINERS INSIDE BOTTOM ROW
 .containerBottomRow {
-  overflow: visible;
   position: relative;
   width: $bottomRowCardWidth;
   background-color: $background;
   color: $darkgrey;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: $cardHeight;
@@ -716,9 +741,33 @@ button {
 }
 
 .bottomRowCard {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.bottomRowCardLine {
+  background-color: $grey;
+  width: 70%;
+  border: none;
+  height: 1px;
+  margin: 15px 0px;
+}
+
+.bottomCardFooter {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-left: -30px;
+}
+
+#bottomCardFooterText {
+  color: $icon;
+  font-size: 11px;
+  margin: 0;
+  margin-left: 10px;
+}
 
 // FOOTER
 #occupiedCopyright {

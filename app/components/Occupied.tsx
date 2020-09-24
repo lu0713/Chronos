@@ -24,6 +24,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import PersonIcon from '@material-ui/icons/Person';
 import UpdateIcon from '@material-ui/icons/Update';
+import PeopleIcon from '@material-ui/icons/People';
 
 // MODALS
 import AddModal from '../modals/AddModal';
@@ -242,13 +243,74 @@ const Occupied = React.memo(() => {
           
           <div className="containerMiddleRow" id="middleLeftContainer">
             <div className="middleContainersIconHeader" id="middleLeftContainerIconHeader">
-              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="MLC"></img>
+              <img className="databaseIcon" src="../assets/globe-icon-white.png" alt="MLC"></img>
             </div>
             <div className="middleRowCard">
+              <div className="mapContainer">
+                <div className="cardTitle">
+                  <p id="globalUsers">Global Users</p>
+                </div>
+                
+                <hr className="titleUnderline"/>
+                
+                <div className="mapArea">
+                  <div className="countryData">              
+                    <div className="mapColumn" id="flags">
+                      <p className="flag">🇺🇸</p>
+                      <p className="flag">🇨🇳</p>
+                      <p className="flag">🇷🇺</p>
+                      <p className="flag">🇮🇳</p>
+                      <p className="flag">🇻🇳</p>
+                      <p className="flag">🇺🇦</p>
+                      <p className="flag">🇰🇷</p>
+                      <p className="flag">🇹🇼</p>
+                    </div>
+
+                    <div className="mapColumn" id="countries">
+                      <p>USA</p>
+                      <p>China</p>
+                      <p>Russia</p>
+                      <p>India</p>
+                      <p>Vietnam</p>
+                      <p>Ukraine</p>
+                      <p>South Korea</p>
+                      <p>Taiwan</p>
+                    </div>
+                    
+                    <div className="mapColumn" id="countryUsers">
+                      <p>2.934</p>
+                      <p>2.821</p>
+                      <p>2.711</p>
+                      <p>2.654</p>
+                      <p>1.982</p>
+                      <p>1.631</p>
+                      <p>1.552</p>
+                      <p>1.211</p>
+                    </div>
+
+                    <div className="mapColumn" id="countryPercentage">
+                      <p>10.56%</p>
+                      <p>9.012%</p>
+                      <p>9.009%</p>
+                      <p>8.855%</p>
+                      <p>8.643%</p>
+                      <p>8.292%</p>
+                      <p>7.411%</p>
+                      <p>6.883%</p>
+                    </div>
+                  </div>
+
+                  <div className="globalMap">
+                    <img id="mapImage" src="../assets/global-map-grey.png" alt="Map"></img>
+                  </div>
+                </div>
+
+              </div>
               <hr className="middleRowCardLine" />
               <div className="middleCardFooter">
-                <UpdateIcon className="cardFooterIcon" />
-                <em><p id="middleCardFooterText">Just updated</p></em>
+                <PeopleIcon className="cardFooterIcon" />
+                <em><p id="middleCardFooterText">Users in millions</p></em>
+                <span id="totalUsers">19.127</span>
               </div>
             </div>
           </div>

@@ -60,6 +60,7 @@ $cardHeight: 280px;
 $iconHeaderTop: -20px;
 $iconHeaderRight: 10px;
 $middleRowCardWidth: 800px;
+$middleRowCardHeight: 310px;
 $bottomRowCardWidth: 520px;
 
 @mixin centerWithFlex($justify: center, $direction: row, $align: center) {

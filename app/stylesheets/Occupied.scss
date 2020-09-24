@@ -628,12 +628,13 @@ button {
   color: $darkgrey;
   justify-content: center;
   align-items: center;
-  height: $cardHeight;
+  height: $middleRowCardHeight;
   border-radius: 3px;
   box-shadow: $boxshadow4;
   margin: 20px;
 }
 
+// MLC
 #middleLeftContainer {
   display: inline-block;
   overflow: visible;  
@@ -644,6 +645,70 @@ button {
   box-shadow: $gredboxshadow;
 }
 
+.mapContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  #globalUsers {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  margin: 20px 0px;
+}
+  
+.titleUnderline {
+  background-color: $mediumgrey;
+  width: 85%;
+  border: none;
+  height: 1.5px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+.mapArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.countryData {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 45%;
+}
+
+.flag {
+  font-size: 22px;
+}
+
+.mapColumn {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0px 20px;
+  line-height: 22px;
+}
+
+.globalMap {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+#mapImage {
+  width: 90%;
+  height: 90%;
+}
+
+// MRC
 #middleRightContainer {
   display: inline-block;
   overflow: visible;  
@@ -672,6 +737,7 @@ button {
 .middleCardFooter {
   width: 90%;
   display: flex;
+  flex-direction: row;
   align-items: center;
   margin-left: -30px;
 }
@@ -681,6 +747,11 @@ button {
   font-size: 11px;
   margin: 0;
   margin-left: 10px;
+}
+
+#totalUsers {
+  font-size: 14px;
+  margin-left: 85px;
 }
 
 // BOTTOM ROW ON DASHBOARD

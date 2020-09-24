@@ -25,6 +25,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import PersonIcon from '@material-ui/icons/Person';
 import UpdateIcon from '@material-ui/icons/Update';
 import PeopleIcon from '@material-ui/icons/People';
+import CachedIcon from '@material-ui/icons/Cached';
 
 // MODALS
 import AddModal from '../modals/AddModal';
@@ -304,14 +305,15 @@ const Occupied = React.memo(() => {
                     <img id="mapImage" src="../assets/global-map-grey.png" alt="Map"></img>
                   </div>
                 </div>
-
               </div>
-              <hr className="middleRowCardLine" />
+
+              <hr className="middleRowCardLine" />              
               <div className="middleCardFooter">
                 <PeopleIcon className="cardFooterIcon" />
                 <em><p id="middleCardFooterText">Users in millions</p></em>
                 <span id="totalUsers">19.127</span>
               </div>
+
             </div>
           </div>
           
@@ -335,13 +337,50 @@ const Occupied = React.memo(() => {
         <div className="lowerContainers" id="bottomContainer">
           <div className="containerBottomRow" id="bottomLeftContainer">
             <div className="bottomContainersIconHeader" id="bottomLeftContainerIconHeader">
-              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BLC"></img>
+              <img className="databaseIcon" src="../assets/question-mark-white.png" alt="BLC"></img>
             </div>
             <div className="bottomRowCard">
+
+              <div className="topicsContainer">
+                <div className="cardTitle">
+                  <p id="topicsTitle">Topics</p>
+                </div>
+
+                <hr className="titleUnderline" />
+                <div className="cardTitle">
+                  <em><p id="topicsSubtitle">Open Topics</p></em>
+                </div>
+                
+                  <div className="topicsSection">
+                    
+                    <div className="topicsColumn" id="questions">
+                      <ul id="questionList">
+                        <li>When can we expect to see the next release?</li>
+                        <li>Does Chronos work with GraphQL?</li>
+                        <li>How does distributed route tracing work?</li>
+                        <li>Will Chronos work with Docker Compose?</li>
+                        <li>Is it possible to use Chronos on any microservices application?</li>
+                        <li>Does Chronos provide LTS for previous version?</li>
+                      </ul>
+                    </div>
+
+                    <div className="topicsColumn" id="status">
+                      <em><p>Thread inactive</p></em>
+                      <em><p>Thread closed</p></em>
+                      <em><p>Thread closed</p></em>
+                      <em><p>Thread active</p></em>
+                      <em><p>Thread inactive</p></em>
+                      <em><p>Thread reopened</p></em>
+                    </div>
+
+                  </div>
+                
+              </div>
+
               <hr className="bottomRowCardLine" />
               <div className="bottomCardFooter">
-                <UpdateIcon className="cardFooterIcon" />
-                <em><p id="bottomCardFooterText">Just updated</p></em>
+                <CachedIcon className="cardFooterIcon" />
+                <em><p id="bottomCardFooterText">Cached answers</p></em>
               </div>
             </div>
           </div>
@@ -353,7 +392,7 @@ const Occupied = React.memo(() => {
             <div className="bottomRowCard">
               <hr className="bottomRowCardLine" />
               <div className="bottomCardFooter">
-                <UpdateIcon className="cardFooterIcon" />
+                <CachedIcon className="cardFooterIcon" />
                 <em><p id="bottomCardFooterText">Just updated</p></em>
               </div>
             </div>

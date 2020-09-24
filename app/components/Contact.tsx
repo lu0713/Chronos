@@ -1,4 +1,6 @@
 import React from 'react';
+import Copyright from '../components/Copyright';
+import '../stylesheets/MainContainer.scss';
 import '../stylesheets/Contact.scss';
 
 const Contact = React.memo((props) => {
@@ -45,6 +47,10 @@ const Contact = React.memo((props) => {
             <input id="contact-submit" type="submit" value="Submit" />
           </form>
         </div>
+      </div>
+
+      <div className="copyright-container">
+        <Copyright />
       </div>
     </div>
   );

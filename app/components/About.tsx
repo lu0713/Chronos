@@ -1,4 +1,6 @@
 import React from 'react';
+import Copyright from '../components/Copyright';
+import '../stylesheets/MainContainer.scss';
 import '../stylesheets/About.scss';
 
 const About: React.FC = React.memo(() => {
@@ -26,6 +28,10 @@ const About: React.FC = React.memo(() => {
         <p className="text">Michael, Ronelle, Todd, Greg
         Brianna, Brian, Alon, Alan
         Ousman, Ben, Chris, Jenae, Tim</p>
+      </div>
+
+      <div className="copyright-container">
+        <Copyright />
       </div>
     </div>
   );

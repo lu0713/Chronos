@@ -30,7 +30,6 @@ import AddModal from '../modals/AddModal';
 import ServicesModal from '../modals/ServicesModal';
 
 // STYLESHEETS
-// import '../stylesheets/Occupied.scss';
 import '../stylesheets/Occupied.scss';
 
 // DASHBOARD CONTEXT
@@ -135,41 +134,43 @@ const Occupied = React.memo(() => {
   return (
     <div className="entireArea">
       <div className="dashboardArea">
-        <header className="mainHeader">
-          <section className="header" id="leftHeader">
-            <span>
-              <ListIcon className="icon" id="listIcon" />
-            </span>
-            <span>
-              <p id="dashboard">Dashboard</p>
-            </span>
-          </section>
-          <section className="header" id="rightHeader">
-            <form className="form">
-              <label className="inputContainer">
-                <input className="form" id="textInput" placeholder={searchTerm} onChange={e => setSearchTerm(e.target.value)} type="text" name="search" />
-                <hr />
-              </label>
-              <button className="form" id="submitBtn" type="submit">
-                <SearchIcon className="icon" id="searchIcon" />
-              </button>
-            </form>
-            <div className="dashboardIconArea">
-              <span className="dashboardTooltip">You have {applications.length} active databases</span>
-              <DashboardIcon className="navIcon" id="dashboardIcon" />
-            </div>
-            
-            <div className="notificationsIconArea">
-              <span className="notificationsTooltip">You have no new alerts</span>
-              < NotificationsIcon className="navIcon" id="notificationsIcon" />
-            </div>
+        <div className="headerContainer">
+          <header className="mainHeader">
+            <section className="header" id="leftHeader">
+              <span>
+                <ListIcon className="icon" id="listIcon" />
+              </span>
+              <span>
+                <p id="dashboardLabel">Dashboard</p>
+              </span>
+            </section>
+            <section className="header" id="rightHeader">
+              <form className="form">
+                <label className="inputContainer">
+                  <input className="form" id="textInput" placeholder={searchTerm} onChange={e => setSearchTerm(e.target.value)} type="text" name="search" />
+                  <hr />
+                </label>
+                <button className="form" id="submitBtn" type="submit">
+                  <SearchIcon className="icon" id="searchIcon" />
+                </button>
+              </form>
+              <div className="dashboardIconArea">
+                <span className="dashboardTooltip">You have {applications.length} active databases</span>
+                <DashboardIcon className="navIcon" id="dashboardIcon" />
+              </div>
+              
+              <div className="notificationsIconArea">
+                <span className="notificationsTooltip">You have no new alerts</span>
+                < NotificationsIcon className="navIcon" id="notificationsIcon" />
+              </div>
 
-            <div className="personIconArea">
-              <span className="personTooltip">You are not logged in</span>
-              <PersonIcon className="navIcon" id="personIcon" />
-            </div>
-          </section>
-        </header>
+              <div className="personIconArea">
+                <span className="personTooltip">You are not logged in</span>
+                <PersonIcon className="navIcon" id="personIcon" />
+              </div>
+            </section>
+          </header>
+        </div>
 
         <div className="cardContainer">
           <div className="card" id={`card-add`}>
@@ -177,6 +178,7 @@ const Occupied = React.memo(() => {
               <AddCircleOutlineTwoToneIcon className={classes.icon} />
             </Button>
           </div>
+
           {applications.map((app: string[], i: number | any | string | undefined) => (
             <div className="card" key={`card-${i}`} id={`card-${i}`}>
               <Card
@@ -223,14 +225,35 @@ const Occupied = React.memo(() => {
               </Card>
             </div>
           ))}
+          
           <Modal open={addOpen} onClose={() => setAddOpen(false)}>
             <AddModal setOpen={setAddOpen} />
           </Modal>
+          
           <Modal open={open} onClose={() => setOpen(false)}>
             <ServicesModal key={`key-${index}`} i={index} app={app} />
           </Modal>
+
         </div>
+        
+        <hr className="dashboardDivider" />
+        
+        <div className="lowerContainers" id="middleContainer">
+          <div className="containerMiddleRow" id="middleLeftContainer">One</div>
+          <div className="containerMiddleRow" id="middleRightContainer">Two</div>
+        </div>
+
+        <hr className="dashboardDivider" />
+
+        <div className="lowerContainers" id="bottomContainer">
+          <div className="containerBottomRow" id="bottomLeftContainer">One</div>
+          <div className="containerBottomRow" id="bottomCenterContainer">Two</div>
+          <div className="containerBottomRow" id="bottomRightContainer">Three</div>
+        </div>
+
       </div>
+
+      
     </div>
   );
 });

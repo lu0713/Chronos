@@ -1,4 +1,6 @@
 import React from 'react';
+import Copyright from '../components/Copyright';
+import '../stylesheets/MainContainer.scss';
 import '../stylesheets/Settings.scss';
 // Need to add flag to turn off the splash at start
 // Need to add flag to turn off getting started page
@@ -14,6 +16,10 @@ const Settings: React.SFC = React.memo((props) => {
       <button className="mode" id="darkMode">
         Dark
       </button>
+      
+      <div className="copyright-container">
+        <Copyright />
+      </div>
     </div>
   );
 });

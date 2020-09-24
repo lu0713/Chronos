@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Copyright from '../components/Copyright';
 import '../stylesheets/Home.scss';
+import '../stylesheets/MainContainer.scss';
 
 const Home = React.memo(function Home(props) {
   return (
@@ -10,6 +11,9 @@ const Home = React.memo(function Home(props) {
       <Link className="link" to="/applications">
         Get Started
       </Link>
+      <div className="copyright-container">
+        <Copyright />
+      </div>
     </div>
   );
 });

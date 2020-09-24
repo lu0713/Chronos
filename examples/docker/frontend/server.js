@@ -40,18 +40,18 @@ app.use((req, res, next) => {
 });
 
 app.all('/books/*', (req, res) => {
-  console.log('redirecting to books');
+  // console.log('redirecting to books');
   // apiProxy.web(req, res, { target: books });
   res.redirect(books + req.originalUrl);
 });
 
 app.all('/customers/*', (req, res) => {
-  console.log('redirecting to customers');
+  // console.log('redirecting to customers');
   res.redirect(customers + req.originalUrl);
 });
 
 app.all('/orders/*', (req, res) => {
-  console.log('redirecting to orders');
+  // console.log('redirecting to orders');
   res.redirect(orders + req.originalUrl);
 });
 

@@ -1,6 +1,21 @@
 @import './constants.scss';
 
-// HEADER
+// ENTIRE DASHBOARD AREA - PARENT
+.dashboardArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// HEADER CONTAINER
+.headerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .mainHeader {
   display: flex;
   flex-direction: row;
@@ -45,7 +60,7 @@
   }
 }
 
-#dashboard {
+#dashboardLabel {
   position: absolute;
   top: 43px;
   left: 300px;
@@ -266,7 +281,6 @@
    border-color: transparent transparent $background transparent;
 }
 
-
 button {
   background-color: transparent;
   border: 0;
@@ -328,28 +342,6 @@ button {
   margin-top: 5px;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: 1px solid green;
-  box-shadow: $boxshadow1;
-  -webkit-text-fill-color: green;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-// MAIN DASHBOARD
-.dashboardArea {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
 
 // DATABASE CARDS
 .cardContainer {
@@ -559,3 +551,93 @@ select:-webkit-autofill:focus {
   color: $header;
   font-size: 11px;
 }
+
+.dashboardDivider {
+  background-color: $mediumgrey;
+  width: 95%;
+  border: none;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+// BOTTOM TWO ROWS ON DASHBOARD
+.lowerContainers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: center;
+  width: 95%;
+  margin-left: 155px;
+  margin-right: 160px;
+}
+
+// MIDDLE ROW ON DASHBOARD
+#middleContainer {
+  
+}
+
+// TWO CONTAINERS INSIDE MIDDLE ROW
+.containerMiddleRow {
+  min-width: 280px;
+  width: 48.8%;
+  background-color: $background;
+  color: $darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  border-radius: 3px;
+  box-shadow: $boxshadow4;
+  margin: 20px 0px;
+}
+
+#middleLeftContainer {
+  
+}
+
+#middleRightContainer {
+
+}
+
+// BOTTOM ROW ON DASHBOARD
+#bottomContainer {
+
+}
+
+// THREE CONTAINERS INSIDE BOTTOM ROW
+.containerBottomRow {
+  min-width: 280px;
+  width: 31%;
+  background-color: $background;
+  color: $darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  border-radius: 3px;
+  box-shadow: $boxshadow4;
+  margin: 20px 0px;
+}
+
+#middleLeftContainer {
+
+}
+
+#middleCenterContainer {
+
+}
+
+#middleRightContainer {
+
+}
+
+
+// FOOTER
+#occupiedCopyright {
+  color: $header;
+}
+

@@ -26,6 +26,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import UpdateIcon from '@material-ui/icons/Update';
 import PeopleIcon from '@material-ui/icons/People';
 import CachedIcon from '@material-ui/icons/Cached';
+import DataUsageIcon from '@material-ui/icons/DataUsage';
 
 // MODALS
 import AddModal from '../modals/AddModal';
@@ -319,13 +320,30 @@ const Occupied = React.memo(() => {
           
           <div className="containerMiddleRow" id="middleRightContainer">
             <div className="middleContainersIconHeader" id="middleRightContainerIconHeader">
-              <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="MRC"></img>
+              <img className="databaseIcon" src="../assets/database-icon-white.png" alt="MRC"></img>
             </div>
-            <div className="middleRowCard">
-              <hr className="middleRowCardLine" />
-              <div className="middleCardFooter">
-                <UpdateIcon className="cardFooterIcon" />
-                <em><p id="middleCardFooterText">Just updated</p></em>
+            
+            <div className="databaseContainer">
+              <div className="cardTitle">
+                <p id="databaseTitle">Active Databases</p>
+              </div>
+              <hr className="titleUnderline" />
+              
+              <div className="middleRowCard">
+                <div className="databaseNamesContainer">
+                  <ul id="databaseNames">
+                    {applications.map((app: string[], i: number | any | string | undefined) => (
+                    <li key={`li-${i}`} id={`li-${i}`}>
+                      {app[0]}
+                    </li>
+                  ))} 
+                  </ul> 
+                </div>
+                {/* <hr className="middleRowCardLine" /> */}
+                <div className="middleCardFooter">
+                  {/* <UpdateIcon className="cardFooterIcon" />
+                  <em><p id="middleCardFooterText">Just updated</p></em> */}
+                </div>
               </div>
             </div>
           </div>
@@ -387,26 +405,38 @@ const Occupied = React.memo(() => {
 
           <div className="containerBottomRow" id="bottomCenterContainer">
             <div className="bottomContainersIconHeader" id="bottomCenterContainerIconHeader">
-              <img className="databaseIcon" src="../assets/postgres-icon-white.png" alt="BCC"></img>
+              <img className="databaseIcon" src="../assets/linkedin-icon-white.png" alt="BCC"></img>
             </div>
             <div className="bottomRowCard">
-              <hr className="bottomRowCardLine" />
+              <div className="cardTitle">
+                <p id="outageTitle">Social Media</p>
+              </div>
+              <hr className="titleUnderline" />
+              <div className="mediaContainer">
+                <img id="socialMediaImage" src="../assets/social-media-dashboard.jpg" alt="Social Media Dashboard"></img>
+              </div>
+              {/* <hr className="bottomRowCardLine" /> */}
               <div className="bottomCardFooter">
-                <CachedIcon className="cardFooterIcon" />
-                <em><p id="bottomCardFooterText">Just updated</p></em>
+                {/* <CachedIcon className="cardFooterIcon" />
+                <em><p id="bottomCardFooterText">Just updated</p></em> */}
               </div>
             </div>
           </div>
 
           <div className="containerBottomRow" id="bottomRightContainer">
             <div className="bottomContainersIconHeader" id="bottomRightContainerIconHeader">
-              <img className="databaseIcon" src="../assets/mongo-icon-white.png" alt="BRC"></img>
+              <img className="databaseIcon" src="../assets/exclamation-point-white.png" alt="BRC"></img>
             </div>
             <div className="bottomRowCard">
-              <hr className="bottomRowCardLine" />
+              <div className="cardTitle">
+                <p id="outageTitle">Outages</p>
+              </div>
+              <hr className="titleUnderline" />
+              <p>No current outages</p>
+              {/* <hr className="bottomRowCardLine" /> */}
               <div className="bottomCardFooter">
-                <UpdateIcon className="cardFooterIcon" />
-                <em><p id="bottomCardFooterText">Just updated</p></em>
+                {/* <UpdateIcon className="cardFooterIcon" /> */}
+                {/* <em><p id="bottomCardFooterText">Just updated</p></em> */}
               </div>
             </div>
           </div>

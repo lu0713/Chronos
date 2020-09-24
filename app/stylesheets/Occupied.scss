@@ -651,10 +651,40 @@ button {
   width: 90%;
 }
 
+.mediaContainer {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  #socialMediaImage {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.databaseContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 45px;
+  text-align: left;
+  align-items: flex-start;
+}
+
+#databaseNames{
+  margin-left: 35px;
+}
+
+.databaseNamesContainer { 
+  display: flex;
+  flex-direction: row;
+}
+
 .cardTitle {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  text-align: left;
   #globalUsers {
     font-size: 18px;
     font-weight: 300;
@@ -721,6 +751,7 @@ button {
 
 // MRC
 #middleRightContainer {
+  // visibility: hidden;
   display: inline-block;
   overflow: visible;  
 }
@@ -847,15 +878,28 @@ button {
 }
 
 #bottomRightContainerIconHeader {
-  background-color: $purple;
-  box-shadow: $purpleboxshadow;
+  background-color: $gred;
+  box-shadow: $gredboxshadow;
+}
+
+#outageTitle {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+}
+
+#databaseTitle {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
 }
 
 .bottomRowCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 40px;
 }
 
 .bottomRowCardLine {
@@ -864,7 +908,7 @@ button {
   border: none;
   height: 1px;
   margin-bottom: 8px;
-  margin-top: 15px;
+  margin-top: 45px;
 }
 
 .bottomCardFooter {
